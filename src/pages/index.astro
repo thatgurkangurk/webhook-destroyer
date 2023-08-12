@@ -1,15 +1,33 @@
 ---
+import Destroyer from "../components/destroyer.svelte";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Webhook Destroyer</title>
+  </head>
+  <body
+    class="container p-8 max-w-md m-auto bg-slate-900 text-center text-white"
+  >
+    <h1 class="text-2xl underline underline-offset-4 font-bold mb-6">
+      Webhook Destroyer
+    </h1>
+    <Destroyer client:idle />
+    <p class="pt-3">
+      made with 🤍 in sweden by <a href="https://gurkz.me">gurkan</a>
+    </p>
+  </body>
+
+  <style is:global>
+    body {
+      color-scheme: dark;
+      font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+        "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+        "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+    }
+  </style>
 </html>
